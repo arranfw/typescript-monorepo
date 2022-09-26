@@ -1,0 +1,33 @@
+<!-- Button.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Button } from '~/components/Button';
+
+<Meta title='Example/Button' component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+With `MDX`, we can define a story for `Button` right in the middle of our
+Markdown documentation.
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      disabled: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name='Disabled'
+    args={{
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

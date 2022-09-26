@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from 'ui';
+import { AppSpecificComponent } from '~/components/AppSpecificComponent';
 
 const useFetchHello = () => {
   const [hello, setHello] = useState([]);
@@ -25,6 +26,7 @@ export default function Web() {
       <h1>Web</h1>
       <p>{hello}</p>
       <Button />
+      <AppSpecificComponent>Hello!</AppSpecificComponent>
     </div>
   );
 }

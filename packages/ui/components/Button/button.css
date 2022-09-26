@@ -1,0 +1,33 @@
+.btn__primary {
+  background-color: #003366;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Noto Sans', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn__primary:focus {
+  outline: 4px solid #3b99fc;
+  outline-offset: 1px;
+}
+
+.btn__primary:not(:disabled):hover {
+  text-decoration: underline;
+  background-color: #336699;
+}
+
+.btn__primary:not(:disabled):active {
+  background-color: #003366;
+}
+
+.btn__primary:disabled {
+  background-color: #336699;
+}
