@@ -60,7 +60,7 @@ jobs:
         id: turbo-cache
         uses: actions/cache@v3
         with:
-          path: .turbo
+          path: node_modules/.cache/turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
@@ -122,7 +122,7 @@ jobs:
         id: turbo-cache
         uses: actions/cache@v3
         with:
-          path: .turbo
+          path: node_modules/.cache/turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
@@ -158,7 +158,7 @@ jobs:
         id: turbo-cache
         uses: actions/cache@v3
         with:
-          path: .turbo
+          path: node_modules/.cache/turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
@@ -194,7 +194,7 @@ jobs:
         id: turbo-cache
         uses: actions/cache@v3
         with:
-          path: .turbo
+          path: node_modules/.cache/turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
@@ -243,7 +243,7 @@ jobs:
         id: turbo-cache
         uses: actions/cache@v3
         with:
-          path: .turbo
+          path: node_modules/.cache/turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
