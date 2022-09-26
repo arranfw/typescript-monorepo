@@ -204,7 +204,7 @@ jobs:
 
   deploy:
     name: 🚀 Deploy
-    needs: [lint, typecheck, test, format]
+    needs: [lint, typecheck, test, build, format]
     runs-on: ubuntu-latest
 
     steps:
