@@ -19,6 +19,8 @@ dist
 # misc
 .DS_Store
 *.pem
+*.tsbuildinfo
+.vscode
 
 # debug
 npm-debug.log*
