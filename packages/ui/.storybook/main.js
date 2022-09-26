@@ -12,6 +12,8 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
   },
   webpackFinal: async (config) => {
+    config.module.rules = config.module.rules.filter((f) => f.test.toString() !== '/\\.css$/');
+
     config.module.rules.push({
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
