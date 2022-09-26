@@ -23,6 +23,13 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: '16'
 
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
+          
       - name: Install dependencies
         run: yarn
 
@@ -38,6 +45,13 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: yarn.lock
           node-version: '16'
+
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
 
       - name: Install dependencies
         run: yarn
@@ -66,6 +80,13 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: yarn.lock
           node-version: '16'
+          
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
 
       - name: Install dependencies
         run: yarn
@@ -86,6 +107,13 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: yarn.lock
           node-version: '16'
+
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
 
       - name: Install dependencies
         run: yarn
@@ -116,6 +144,13 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: '16'
 
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
+
       - name: Install dependencies
         run: yarn
 
@@ -145,6 +180,13 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: '16'
 
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
+          
       - name: Install dependencies
         run: yarn
 
@@ -186,6 +228,13 @@ jobs:
           echo "SHA:        ${{ github.sha }}"
           VER=`node --version`; echo "Node ver:   $VER"
           VER=`yarn --version`; echo "yarn ver:    $VER"
+
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn
+          restore-keys: ${{ runner.os }}-yarn
 
       - name: Install dependencies
         run: yarn
