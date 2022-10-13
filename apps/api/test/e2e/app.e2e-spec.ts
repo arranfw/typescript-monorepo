@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from './../src/app.module';
+import { AppModule } from '../../src/app.module';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -15,7 +15,11 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer()).get('/').expect(200).expect({ hello: 'Hello World!' });
+  it('/error (GET)', () => {
+    return request(app.getHttpServer()).get('/error').expect(500).expect({
+      statusCode: 500,
+      message: 'Sample server error',
+      error: 'Internal Server Error',
+    });
   });
 });

@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): { hello: string } {
-    return { hello: 'Hello World!' };
+  getError() {
+    throw new InternalServerErrorException('Sample server error');
   }
 }

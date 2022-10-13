@@ -14,9 +14,9 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return a "Hello World!" object', () => {
-      expect(appController.getHello()).toStrictEqual({ hello: 'Hello World!' });
+  describe('GET /error', () => {
+    it('should throw an error', () => {
+      expect(() => appController.getError()).toThrow('Sample server error');
     });
   });
 });
