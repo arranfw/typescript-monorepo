@@ -9,10 +9,14 @@ async function bootstrap() {
     logger: customLogger,
   });
   app.enableCors();
+
+  /* Versioning + Prefixing */
+  app.setGlobalPrefix('api');
   app.enableVersioning({
     defaultVersion: '1',
     type: VersioningType.URI,
   });
+
   await app.listen(4000);
 }
 bootstrap();
